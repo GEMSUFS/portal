@@ -40,7 +40,7 @@ window.GEMS = {
     chamada: "Ciência, campo e inovação para a agricultura do Semiárido",   // título do bloco "O grupo"
     sobre: [
       "O GEMS — Grupo de Estudos em Melhoramento Vegetal do Semiárido — reúne estudantes de graduação, mestrado e doutorado da Universidade Federal de Sergipe, no Campus do Sertão, em torno do melhoramento genético de plantas, com foco na cultura do milho.",
-      "O grupo atua em iniciação científica, iniciação tecnológica e ações de extensão, conduz programas de seleção recorrente, mantém um banco ativo de germoplasma e desenvolve as próprias ferramentas digitais, como o SEEDS. A coordenação é do Prof. Dr. Gustavo Hugo Ferreira de Oliveira."
+      "O grupo atua em iniciação científica, iniciação tecnológica e ações de extensão, conduz programas de seleção recorrente, mantém um banco ativo de germoplasma e desenvolve as próprias ferramentas digitais, como o SEEDS. O grupo foi idealizado e é orientado pelo Prof. Dr. Gustavo Hugo Ferreira de Oliveira, com coorientação do Prof. Dr. José Jairo Florentino Cordeiro Junior."
     ]
   },
 
@@ -51,6 +51,16 @@ window.GEMS = {
     github: "",      // ex.: "https://github.com/gemsufs"       (vazio = não aparece)
     endereco: "Fazenda Experimental da UFS – Campus do Sertão, Pov. Mesinhas"
   },
+
+  /* ---------------------------------------------------------------------
+     VÍNCULO INSTITUCIONAL — logos na faixa acima do rodapé, em todas as páginas
+       monocromatico: true -> logo de uma cor só (branco); o site pinta de
+                              escuro no tema claro e deixa branco no escuro
+     --------------------------------------------------------------------- */
+  instituicoes: [
+    { nome: "Universidade Federal de Sergipe", logo: "assets/img/ufs.png", link: "https://www.ufs.br/", monocromatico: true },
+    { nome: "Departamento de Engenharia Agronômica do Sertão (DEAS)", logo: "assets/img/deas.png", link: "https://www.instagram.com/deas_ufsser/" }
+  ],
 
   /* ---------------------------------------------------------------------
      SEÇÕES (categorias das notícias)
@@ -92,7 +102,7 @@ window.GEMS = {
       tags: ["Dia de Campo", "extensão", "milho"],
       texto: [
         "O GEMS convida agricultores, estudantes e pesquisadores para o **Dia de Campo GEMS**, na sexta-feira, 18 de setembro de 2026, na Fazenda Experimental da UFS – Campus do Sertão, no povoado Mesinhas. O encontro começa às 8h30 e vai até as 11h30.",
-        "“É hora de sair da teoria, colocar o conhecimento em prática e vivenciar a pesquisa diretamente no campo”, diz o convite publicado pelo grupo. O professor Gustavo Oliveira, coordenador do GEMS, também gravou um convite em vídeo.",
+        "“É hora de sair da teoria, colocar o conhecimento em prática e vivenciar a pesquisa diretamente no campo”, diz o convite publicado pelo grupo. O professor Gustavo Oliveira, orientador do GEMS, também gravou um convite em vídeo.",
         "## O que você vai encontrar",
         "- **Pesquisa e experimentação**, com os experimentos conduzidos pelo grupo abertos à visitação;",
         "- **Conhecimento no campo**, com a equipe explicando cada etapa do trabalho;",
@@ -163,7 +173,7 @@ window.GEMS = {
         "O GEMS foi destaque no **IV SEAGRO – Seminário da Agroprodução e VI Semana de Agronomia**, realizado pelo Instituto Federal de Alagoas (IFAL) – Campus Piranhas, com o tema “Pesquisa, Inovação e Mercado: Novos Caminhos para o Agro no Semiárido”.",
         "**José Felipe Dantas Lima**, discente de Engenharia Agronômica, conquistou o **3º lugar na categoria Melhor Resumo Científico** com o trabalho “SEEDS: aplicativo para gestão, rastreabilidade e inovação em programas de melhoramento vegetal no semiárido”.",
         "Desenvolvido pelo próprio grupo, o SEEDS integra em um único ambiente o registro de materiais, cruzamentos, progênies e informações de experimentos, deixando a gestão do programa de melhoramento mais organizada, eficiente e rastreável.",
-        "O trabalho teve orientação do Prof. Dr. Gustavo Oliveira, coordenador do grupo e professor adjunto do Departamento de Engenharia Agronômica do Sertão (DEAS).",
+        "O trabalho teve orientação do Prof. Dr. Gustavo Oliveira, orientador do grupo e professor adjunto do Departamento de Engenharia Agronômica do Sertão (DEAS).",
         "[Conheça o SEEDS por dentro](noticia.html?id=seeds-3-5)."
       ]
     },
@@ -304,7 +314,7 @@ window.GEMS = {
       tags: ["polinização", "milho", "campo"],
       texto: [
         "No melhoramento de milho, algumas tarefas não podem ser marcadas com semanas de antecedência. A polinização controlada precisa acontecer quando pendão e espiga estão prontos — e quem decide o dia é a planta, não a agenda.",
-        "Para lidar com isso, o regulamento do GEMS prevê a **janela de prontidão**: o coordenador anuncia um período e, dentro dele, a convocação pode ocorrer com 24 a 48 horas de antecedência. Todos já contam com isso.",
+        "Para lidar com isso, o regulamento do GEMS prevê a **janela de prontidão**: o coordenador de campo anuncia um período e, dentro dele, a convocação pode ocorrer com 24 a 48 horas de antecedência. Todos já contam com isso.",
         "## Eventos críticos",
         "A polinização faz parte dos chamados eventos críticos, ao lado da semeadura, da colheita e da montagem de experimentos. Nesses dias, a presença de todos os membros é esperada, qualquer que seja o departamento. Nos eventos que podem ser agendados, as faltas precisam ser avisadas com pelo menos sete dias de antecedência.",
         "## Na prática",
@@ -387,7 +397,7 @@ window.GEMS = {
     { valor: "15", rotulo: "resumos científicos no IV SEAGRO" },
     { valor: "3",  rotulo: "premiações em eventos científicos em 2026" },
     { valor: "1ª", rotulo: "tese de doutorado defendida no grupo" },
-    { valor: "4",  rotulo: "departamentos" }
+    { valor: "{membros}", rotulo: "integrantes, da graduação ao doutorado" }   // {membros} = conta sozinho
   ],
 
   /* ---------------------------------------------------------------------
@@ -405,6 +415,234 @@ window.GEMS = {
     { nome: "Mídia", icone: "camera", categoria: "", cor: "#B4472A",
       texto: "Registra e comunica o trabalho do grupo em fotos, vídeos e nos canais do GEMS." }
   ],
+
+  /* ---------------------------------------------------------------------
+     EQUIPE — página "Membros"
+       grupo    -> id de um dos "grupos" abaixo
+       foto     -> retrato padronizado em "imagens/membros" (vazio = monograma)
+       lattes   -> endereço do currículo Lattes (vazio = não aparece)
+       orcid    -> só o número, ex.: "0000-0002-3839-6261"
+       credenciais -> só para quem está num grupo com destaque: true (linhas de formação)
+       coordena -> nome de um dos "departamentos": a pessoa ganha destaque como
+                   coordenação dele (aqui e no cartão do departamento na página inicial)
+       email    -> aparece no cartão, com link (o site é público: só com autorização)
+     Nunca coloque aqui CPF ou matrícula.
+     --------------------------------------------------------------------- */
+  equipe: {
+    titulo: "Quem faz o GEMS",
+    intro: "Docentes, pós-graduandos e estudantes de graduação que conduzem, do campo à análise de dados, o melhoramento de milho para o Semiárido na UFS – Campus do Sertão.",
+    grupos: [
+      { id: "orientacao",    nome: "Orientação",    descricao: "Orientação e coorientação científica do grupo.", destaque: true },
+      { id: "pos-graduacao", nome: "Pós-graduação", descricao: "Mestrado e doutorado no Programa de Pós-Graduação em Agricultura e Biodiversidade (PPGAGRI/UFS)." },
+      { id: "graduacao",     nome: "Graduação",     descricao: "Estudantes da UFS – Campus do Sertão em iniciação científica, tecnológica e extensão." },
+      { id: "colaboracao",   nome: "Colaboração",   descricao: "Membros externos que atuam nos projetos do grupo." }
+    ],
+    membros: [
+
+      { id: "gustavo-oliveira", grupo: "orientacao",
+        nome: "Gustavo Hugo Ferreira de Oliveira",
+        cargo: "Orientador e idealizador do GEMS",
+        foto: "imagens/membros/gustavo-oliveira.webp",
+        credenciais: ["Doutorado em Produção Vegetal — UNESP", "Mestrado — UFRPE", "Professor adjunto — DEAS/UFS, desde 2018"],
+        bio: "Idealizou o GEMS e orienta o grupo. Professor adjunto do Departamento de Engenharia Agronômica do Sertão (DEAS/UFS), conduz o programa de melhoramento de milho do grupo, com trabalhos em seleção de genótipos adaptados ao Semiárido, fenotipagem por imagens e envirotyping.",
+        lattes: "https://lattes.cnpq.br/7634952167645542", orcid: "0000-0002-3839-6261",
+        email: "gustavooliveira@academico.ufs.br" },
+
+      { id: "jairo-cordeiro", grupo: "orientacao",
+        nome: "José Jairo Florentino Cordeiro Junior",
+        cargo: "Coorientador do GEMS",
+        foto: "imagens/membros/jairo-cordeiro.webp",
+        credenciais: ["Doutorado em Engenharia Agrícola — UFRPE", "Mestrado em Produção Agrícola — UFRPE", "Professor adjunto — UFS, Campus do Sertão, desde 2018"],
+        bio: "Coorienta o grupo ao lado do professor Gustavo Oliveira. Engenheiro agrônomo formado pela Universidade Federal Rural de Pernambuco, onde também fez mestrado e doutorado, é professor adjunto do Núcleo de Graduação de Agronomia da UFS – Campus do Sertão.",
+        lattes: "https://lattes.cnpq.br/1366860947364876", orcid: "0000-0002-1138-8309",
+        email: "jairofcordeiro@academico.ufs.br" },
+
+      { id: "barbara-nascimento", grupo: "pos-graduacao",
+        nome: "Barbara Nascimento Santos",
+        cargo: "Doutoranda · PPGAGRI/UFS",
+        foto: "imagens/membros/barbara-nascimento.webp",
+        bio: "Engenheira agrônoma pela UFS – Campus do Sertão. Desenvolve um protocolo de fenotipagem de alto rendimento com imagens aéreas de drone para identificar precocemente genótipos de milho no Semiárido.",
+        lattes: "https://lattes.cnpq.br/3897884816442099", orcid: "0000-0002-1689-7399",
+        email: "barbaranascimento2804@gmail.com" },
+
+      { id: "carla-nayara", grupo: "pos-graduacao",
+        nome: "Carla Nayara da Silva Lima",
+        cargo: "Pós-graduação · PPGAGRI/UFS",
+        foto: "imagens/membros/carla-nayara.webp",
+        bio: "Graduação pelo Departamento de Ciências Florestais da UFS e mestrado em Agricultura e Biodiversidade. Integra as equipes dos estudos do grupo sobre uso de nitrogênio e fenotipagem de milho por drone.",
+        lattes: "https://lattes.cnpq.br/7567058592041542", orcid: "0009-0003-0677-4998",
+        email: "carla.nayara.716@gmail.com" },
+
+      { id: "jacilene-santos", grupo: "pos-graduacao",
+        nome: "Jacilene Francisca Souza Santos",
+        cargo: "Doutoranda · PPGAGRI/UFS",
+        foto: "imagens/membros/jacilene-santos.webp",
+        bio: "Engenheira agrônoma e mestre em Agricultura e Biodiversidade, pesquisa recursos genéticos para o melhoramento do milho frente a estresses bióticos e abióticos. Menção honrosa em 1º lugar no IV CONAGRO (2026).",
+        lattes: "https://lattes.cnpq.br/3994415488550168", orcid: "0000-0001-5109-3663",
+        email: "jacisanttos17@gmail.com" },
+
+      { id: "nartenia-aragao", grupo: "pos-graduacao",
+        nome: "Nartênia Susane Costa Aragão",
+        cargo: "Mestranda · PPGAGRI/UFS",
+        foto: "imagens/membros/nartenia-aragao.webp",
+        bio: "Técnica agropecuária pelo IFS e engenheira agrônoma pela UFS – Campus do Sertão. Seleciona genótipos de milho adaptados ao Semiárido com FAI-BLUP, MGIDI e GYT biplot. Premiada no PIBIC 2021/22 e 2022/23.",
+        lattes: "https://lattes.cnpq.br/8012425150523512", orcid: "0000-0003-3409-3236",
+        email: "nartenia.aragao@gmail.com" },
+
+      { id: "arthur-valenca", grupo: "graduacao",
+        nome: "Arthur Rocha Valença",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/arthur-valenca.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "", orcid: "0009-0001-2381-626X",
+        email: "" },
+
+      { id: "camila-lima", grupo: "graduacao",
+        nome: "Camila Lima Santos",
+        cargo: "Zootecnia",
+        foto: "imagens/membros/camila-lima.webp",
+        bio: "Estudante de graduação em Zootecnia na UFS – Campus do Sertão.",
+        lattes: "https://lattes.cnpq.br/4999441804660008", orcid: "0009-0005-1771-0601",
+        email: "camila091@academico.ufs.br" },
+
+      { id: "carlos-emanuel", grupo: "graduacao",
+        nome: "Carlos Emanuel Brito dos Santos",
+        cargo: "Graduação · UFS",
+        foto: "imagens/membros/carlos-emanuel.webp",
+        bio: "Estudante de graduação na UFS – Campus do Sertão.",
+        lattes: "https://lattes.cnpq.br/5041383353796564", orcid: "0009-0000-3327-2756",
+        email: "manuevil20@gmail.com" },
+
+      { id: "evany-melo", grupo: "graduacao",
+        nome: "Evany dos Santos Melo",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/evany-melo.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "", orcid: "0009-0000-9404-823X",
+        email: "evanymelo@academico.ufs.br" },
+
+      { id: "itamara-almeida", grupo: "graduacao", coordena: "Germoplasma",
+        nome: "Itamara de Almeida Santos",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/itamara-almeida.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "", orcid: "0009-0003-8315-0927",
+        email: "itamaradealmeida@academico.ufs.br" },
+
+      { id: "joao-pedro-alves", grupo: "graduacao", coordena: "Campo",
+        nome: "João Pedro da Silva Alves",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/joao-pedro-alves.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "https://lattes.cnpq.br/7199299150504519", orcid: "0009-0008-9662-2002",
+        email: "agro.jpalves@gmail.com" },
+
+      { id: "jose-felipe-dantas", grupo: "graduacao", coordena: "Tecnologia",
+        nome: "José Felipe Dantas Lima",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/jose-felipe-dantas.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "https://lattes.cnpq.br/8422282845805796", orcid: "0009-0000-9629-5103",
+        email: "felipedantascontato@gmail.com" },
+
+      { id: "raiane-paixao", grupo: "graduacao", coordena: "Mídia",
+        nome: "Raiane Prissila Andrade da Paixão",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/raiane-paixao.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "https://lattes.cnpq.br/7543957456190153", orcid: "0009-0001-5302-5952",
+        email: "raianeprissila@gmail.com" },
+
+      { id: "silvio-souza", grupo: "graduacao",
+        nome: "Silvio Roberto de Souza Junior",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/silvio-souza.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "", orcid: "0009-0000-2442-0163",
+        email: "silviojunior@academico.ufs.br" },
+
+      { id: "vinicius-aragao", grupo: "graduacao",
+        nome: "Vinicius Emanuel Silva Aragão",
+        cargo: "Engenharia Agronômica",
+        foto: "imagens/membros/vinicius-aragao.webp",
+        bio: "Estudante de graduação em Engenharia Agronômica na UFS – Campus do Sertão.",
+        lattes: "", orcid: "0009-0009-7585-1698",
+        email: "viniciusemanuel557@gmail.com" },
+
+      { id: "mikaely-rosendo", grupo: "colaboracao",
+        nome: "Mikaely Rosendo dos Santos",
+        cargo: "Membro externo",
+        foto: "imagens/membros/mikaely-rosendo.webp",
+        bio: "Integra a equipe do estudo sobre altura de planta estimada por drone para seleção de milho sob diferentes níveis de nitrogênio, publicado nos anais do SIGM 2026.",
+        lattes: "https://lattes.cnpq.br/5195830206356678", orcid: "0000-0003-0454-8498",
+        email: "mikaellyrosendodossantos285@gmail.com" }
+
+    ]
+  },
+
+  /* ---------------------------------------------------------------------
+     EXPERIMENTOS — página "Experimentos" e chamada na página inicial
+       sigla    -> nome curto em destaque
+       resumo   -> uma frase, usada no cartão da página inicial
+       foco     -> etiquetas curtas com o que o experimento avalia
+       parceria -> instituição parceira (opcional)
+       arte     -> desenho do experimento: "ambientes", "cruzamento",
+                   "topcross" ou "bacterias"
+       cor      -> cor de destaque do experimento
+     --------------------------------------------------------------------- */
+  experimentos: {
+    titulo: "Experimentos",
+    intro: "As linhas de experimentação do GEMS com a cultura do milho, conduzidas no Campus do Sertão para gerar materiais mais produtivos, estáveis e adaptados ao Semiárido.",
+    lista: [
+      {
+        id: "vcu", sigla: "VCU", nome: "Valor de Cultivo e Uso",
+        cor: "#2F7542", arte: "ambientes",
+        resumo: "Desempenho agronômico e adaptação de genótipos de milho em ambientes representativos do semiárido.",
+        foco: ["Produtividade", "Estabilidade", "Adaptação"],
+        parceria: "",
+        texto: [
+          "O experimento de VCU (Valor de Cultivo e Uso) tem como objetivo avaliar o desempenho agronômico e a adaptação de diferentes genótipos de milho em ambientes representativos do semiárido. São analisadas características relacionadas à produtividade, à estabilidade e à adaptação dos materiais, permitindo identificar aqueles com maior potencial de cultivo na região.",
+          "A avaliação em diferentes ambientes ajuda a compreender o comportamento dos genótipos e a subsidiar as etapas de seleção e desenvolvimento de materiais de milho mais produtivos, estáveis e adaptados às condições do semiárido."
+        ]
+      },
+      {
+        id: "inter", sigla: "INTER", nome: "Híbridos intervarietais",
+        cor: "#235C94", arte: "cruzamento",
+        resumo: "Cruzamentos entre populações divergentes e a população F2 como matéria-prima para seleção e novos híbridos.",
+        foco: ["Heterose", "População F2", "Seleção recorrente"],
+        parceria: "",
+        texto: [
+          "Híbridos intervarietais são obtidos pelo cruzamento controlado entre duas populações de polinização aberta geneticamente divergentes, explorando a heterose entre elas.",
+          "A geração F1 desse cruzamento, ao ser autofecundada, origina a população base F2. É nesse momento que ocorrem a segregação e a recombinação dos alelos parentais, gerando a variabilidade genética que servirá de matéria-prima para a seleção recorrente, a obtenção de linhagens ou a formação de novos híbridos.",
+          "Estudos mostram que híbridos derivados de populações F2 podem igualar em produtividade os derivados de F1, com custo de semente bem mais baixo que o dos híbridos comerciais."
+        ]
+      },
+      {
+        id: "topcross", sigla: "TOPCROSS", nome: "Híbridos top cross de tripla aptidão",
+        cor: "#9A6412", arte: "topcross",
+        resumo: "Híbridos top cross de milho para grãos, forragem e milho verde: uma cultivar, três usos.",
+        foco: ["Grãos", "Forragem", "Milho verde"],
+        parceria: "",
+        texto: [
+          "O experimento trata do desenvolvimento de híbridos top cross de milho com tripla aptidão, destinados à produção de grãos, de forragem e de milho verde.",
+          "O top cross é uma técnica de melhoramento genético de plantas que consiste no cruzamento entre uma linhagem e um híbrido ou variedade usado como testador. Ela permite obter híbridos top cross e avaliar a capacidade de combinação das linhagens envolvidas.",
+          "Diante da necessidade dos produtores da região de disporem de cultivares versáteis, capazes de atender a diferentes finalidades conforme a demanda do mercado ou da propriedade, o projeto busca desenvolver híbridos top cross que possam ser destinados tanto à colheita de grãos quanto à produção de forragem e à comercialização como milho verde.",
+          "Espera-se, com isso, oferecer aos produtores da região uma cultivar multipropósito, que facilite a tomada de decisão no manejo da lavoura e amplie as possibilidades de uso da cultura do milho."
+        ]
+      },
+      {
+        id: "bac", sigla: "BAC", nome: "Bactérias na fixação biológica de nitrogênio",
+        cor: "#6B4C8A", arte: "bacterias",
+        resumo: "Bactérias Gram-positivas e Gram-negativas para reduzir o uso de adubo nitrogenado no milho.",
+        foco: ["Fixação biológica de N", "Menos fertilizante", "Sustentabilidade"],
+        parceria: "BIOWORD",
+        texto: [
+          "Desenvolvido em parceria com a BIOWORD, o experimento trabalha com bactérias Gram-positivas e Gram-negativas para avaliar seu potencial na fixação biológica de nitrogênio (FBN) na cultura do milho.",
+          "O estudo busca identificar o potencial dessas bactérias na redução do uso de fertilizantes nitrogenados, contribuindo para um manejo mais eficiente e sustentável da cultura."
+        ]
+      }
+    ]
+  },
 
   /* ---------------------------------------------------------------------
      DESTAQUE DO SEEDS — bloco da página inicial

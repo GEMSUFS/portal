@@ -1,6 +1,6 @@
 # Portal de notícias do GEMS
 
-Site do **GEMS — Grupo de Estudo em Melhoramento Vegetal do Semiárido (UFS)**,
+Site do **GEMS — Grupo de Estudos em Melhoramento Vegetal do Semiárido (UFS)**,
 no formato de portal de notícias. É um site estático (HTML, CSS e JavaScript,
 sem nada para instalar), feito para ser publicado de graça no **GitHub Pages**.
 
@@ -97,6 +97,25 @@ Coloque o link do YouTube no campo `video` da notícia
 - `essenciais` — a lista numerada da lateral (use os `id` das notícias).
 - `agenda` — compromissos; os que já passaram somem sozinhos.
 - `numeros`, `departamentos` e `seeds` — os blocos da página inicial.
+  Em `numeros`, o valor `{membros}` é trocado sozinho pelo total da equipe.
+- `equipe` — a página **Membros** (ver abaixo).
+- `instituicoes` — os logos da faixa “Vínculo institucional”, acima do rodapé
+  (UFS e DEAS). Logo de uma cor só leva `monocromatico: true`.
+
+### Membros
+
+A página `membros.html` é montada a partir de `equipe` no `conteudo.js`: cada
+pessoa tem nome, grupo (orientação, pós-graduação, graduação, colaboração),
+cargo, uma descrição curta, foto, e-mail e os links do Lattes e do ORCID
+(campo vazio não aparece). O e-mail fica visível e clicável no cartão: só
+publique o de quem autorizou. **Nunca coloque CPF ou matrícula ali — o site
+é público.**
+
+As fotos ficam em `imagens/membros/`, todas com **640 × 800 px, fundo
+transparente (WebP)**, olhos na mesma altura e o rosto na mesma escala; é isso
+que deixa a vitrine alinhada. Para incluir alguém novo, peça ao Claude para
+recortar e padronizar a foto do mesmo jeito. Quem estiver sem foto (`foto: ""`)
+aparece com uma silhueta e as iniciais, no mesmo tamanho dos demais.
 
 ---
 
@@ -114,7 +133,7 @@ publicado.
 
 Para que o link compartilhado mostre a imagem do GEMS, o WhatsApp e as redes
 exigem o endereço completo da imagem. Depois que o site estiver no ar, troque
-nos arquivos `index.html`, `noticia.html` e `noticias.html` o trecho
+nos arquivos `index.html`, `noticia.html`, `noticias.html` e `membros.html` o trecho
 
 ```html
 <meta property="og:image" content="assets/img/og-gems.png">
@@ -135,9 +154,11 @@ gems-portal/
 ├── index.html        página inicial
 ├── noticia.html      página de cada notícia (noticia.html?id=...)
 ├── noticias.html     arquivo, seções e busca
+├── membros.html      vitrine da equipe
 ├── 404.html          página de endereço inexistente
-├── conteudo.js       ← notícias, agenda e contatos (o arquivo que se edita)
+├── conteudo.js       ← notícias, equipe, agenda e contatos (o arquivo que se edita)
 ├── imagens/          ← fotos das notícias
+│   └── membros/      ← retratos padronizados da equipe
 ├── assets/
 │   ├── css/portal.css
 │   ├── js/portal.js  monta as páginas a partir do conteudo.js
